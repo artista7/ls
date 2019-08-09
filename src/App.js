@@ -13,7 +13,7 @@ const Hoverable = styled.div`
 const Cognito = function ({ }) {
   return (
     <Hoverable className="card">
-      <div className="card-content has-background-warning">
+      <div className="card-content has-background-light">
         <a href="https://cognito.learning-sage.com" target="_blank">
           <div className="content" style={{ height: "200px", display: "flex", flexDirection: 'column' }}>
             <h1>Cognito</h1>
@@ -23,10 +23,23 @@ const Cognito = function ({ }) {
       </div>
     </Hoverable>)
 }
+const Scheduler = function ({ }) {
+  return (
+    <Hoverable className="card">
+      <div className="card-content has-background-grey-lighter">
+        <a href="https://dev-autobot.learning-sage.com/https://dev-autobot.learning-sage.com/api" target="_blank">
+          <div className="content" style={{ height: "200px", display: "flex", flexDirection: 'column' }}>
+            <h1>Scheduler</h1>
+            <p>Our engine to schedule interviews during placements</p>
+          </div>
+        </a>
+      </div>
+    </Hoverable>)
+}
 const Zook = function ({ }) {
   return (
     <Hoverable className="card">
-      <div className="card-content has-background-danger">
+      <div className="card-content has-background-light">
         <a href="https://zook.learning-sage.com" target="_blank">
           <div className="content" style={{ height: "200px", display: "flex", flexDirection: 'column' }}>
             <h1>Zook</h1>
@@ -39,7 +52,7 @@ const Zook = function ({ }) {
 const Bootcamp = function ({ }) {
   return (
     <Hoverable className="card">
-      <div className="card-content has-background-primary">
+      <div className="card-content has-background-grey-lighter">
         <a href="https://bootcamp.learning-sage.com" target="_blank">
           <div className="content" style={{ height: "200px", display: "flex", flexDirection: 'column' }}>
             <h1>Bootcamp</h1>
@@ -49,30 +62,17 @@ const Bootcamp = function ({ }) {
       </div>
     </Hoverable>)
 }
-const Scheduler = function ({ }) {
-  return (
-    <Hoverable className="card">
-      <div className="card-content has-background-light">
-        <a href="https://scheduler.learning-sage.com" target="_blank">
-          <div className="content" style={{ height: "200px", display: "flex", flexDirection: 'column' }}>
-            <h1>Scheduler</h1>
-            <p>Our engine to schedule interviews during placements</p>
-          </div>
-        </a>
-      </div>
-    </Hoverable>)
-}
 
 
 function App() {
   return (
-    <section className="hero is-dark is-bold is-fullheight">
+    <section className="hero is-primary is-bold is-fullheight">
       <div class="hero-head">
         <nav class="navbar">
           <div class="container">
             <div className="navbar-brand">
               <a className="navbar-item">
-                <span className="is-size-4" style={{ fontFamily: "pacifico" }}>Cognito</span>
+                <span className="is-size-4" style={{ fontFamily: "pacifico" }}>learningSage</span>
               </a>
               <span className="navbar-burger burger" data-target="navbarMenuHeroB">
                 <span></span>
@@ -94,8 +94,11 @@ function App() {
       <div className="hero-body">
         <div className="container">
           <div className="columns is-multiline">
-            <div className="column is-3 is-offset-1">
+            <div className="column is-3">
               <Cognito />
+            </div>
+            <div className="column is-3">
+              <Scheduler />
             </div>
             <div className="column is-3">
               <Zook />
@@ -103,9 +106,6 @@ function App() {
             <div className="column is-3">
               <Bootcamp />
             </div>
-            {/* <div className="column is-3">
-              <Scheduler />
-            </div> */}
           </div>
         </div>
       </div>
